@@ -10,6 +10,8 @@ Requirements discovery and research → Three design directions → User selecti
 
 By default, three actual visual drafts are presented before the user selects a direction for further development. Explicit requests to skip exploration, iterations on an approved direction, and mechanical operations proceed through the applicable stages.
 
+Each stage completes its loop within the current turn: input → Open Design execution → terminal status → artifact retrieval → checks and repairs → presentation, followed by any required user decision. Task records, explicit project binding, and idempotent recovery support continuation. Displaying a brief form or starting a run does not complete a stage, and generated results must be returned without requiring another “continue” message.
+
 ## Installation and usage
 
 Place this repository in a skills directory recognized by your runtime, keeping the directory name as `open-design-assistant`, for example `~/.agents/skills/open-design-assistant/`. Reload the skill, then invoke it:
@@ -29,6 +31,8 @@ All intermediate and final files follow the user's project output rules. Existin
 ## Validation status
 
 Independent agents have completed simulated tests of responsibility boundaries and stage transitions. Plugin delegation and exemptions from the three-direction gate were refined and retested. Actual end-to-end testing with Open Design has not yet been completed, and compatibility across all runtimes and models has not been verified.
+
+The per-stage loop, brief-form capability boundaries, and artifact retrieval rules have undergone document review and on-disk consistency checks. These checks do not constitute end-to-end validation of a real generation run.
 
 ## References
 
