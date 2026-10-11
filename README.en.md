@@ -14,6 +14,8 @@ Each stage completes its loop within the current turn: input → Open Design exe
 
 This skill belongs to the user-session host orchestrator. Dispatch binds an actual production skill and an explicit production role. The production executor directly completes stage artifacts without recursively dispatching, waiting for its parent, or using host recovery records. Proven circular waits are workflow faults; cancellation requires user authorization.
 
+Web and motion delivery uses a verified HTTP(S) preview and checks that the target browser shows the current artifact with actual motion or required interaction. Local files are offline or fallback deliveries; files, source code, and screenshots alone do not prove dynamic playback. Missing browser capabilities or permissions are reported as unverified items.
+
 ## Installation and usage
 
 Place this repository in a skills directory recognized by your runtime, keeping the directory name as `open-design-assistant`, for example `~/.agents/skills/open-design-assistant/`. Reload the skill, then invoke it:
@@ -37,6 +39,8 @@ Independent agents have completed simulated tests of responsibility boundaries a
 The per-stage loop, brief-form capability boundaries, and artifact retrieval rules have undergone document review and on-disk consistency checks. These checks do not constitute end-to-end validation of a real generation run.
 
 A real run exposed production-role confusion and a parent-child circular wait with no artifacts. The affected runs were canceled with authorization. The role-isolation contract has been revised accordingly; a complete deck workflow still needs another live test. Document and simulated checks are not proof of successful generation.
+
+A diary loading-page run produced three real directions but initially omitted in-app preview acceptance. After opening a working HTTP entry, animation time advanced in all three directions in codeg's built-in browser. The preview contract now addresses that gap; this does not establish compatibility with every browser, media type, or interaction.
 
 ## References
 
