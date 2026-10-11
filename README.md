@@ -1,5 +1,7 @@
 # open-design-assistant
 
+[中文](README.md) | [English](README.en.md)
+
 一个只掌控 workflow 的设计技能。Open Design 负责需求理解、设计判断，以及所有中间和最终产物；本技能负责阶段调度、成果展示和用户反馈传递。
 
 ## 工作流
